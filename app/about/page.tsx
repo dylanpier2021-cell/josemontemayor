@@ -31,12 +31,12 @@ export default function AboutPage() {
       <Section>
         <div className="grid items-start gap-10 lg:grid-cols-[1fr,1.4fr]">
           <div className="lg:sticky lg:top-24">
-            <div className="overflow-hidden rounded-2xl border border-navy/10 shadow-card">
+            <div className="aspect-[3/4] overflow-hidden rounded-2xl border border-navy/10 shadow-card">
               <SiteImage
-                src="/images/jose-portrait.svg"
-                alt="Professional portrait of Jose Montemayor"
-                width={600}
-                height={700}
+                src="/images/about.jpg"
+                alt="A solar professional installing panels on a rooftop"
+                width={1600}
+                height={2133}
                 className="h-full w-full object-cover"
                 sizes="(max-width: 1024px) 100vw, 33vw"
               />
@@ -44,6 +44,10 @@ export default function AboutPage() {
             <div className="mt-4">
               <VeteranBadge />
             </div>
+            <p className="mt-2 text-xs text-ink/55">
+              A professional photo of Jose is coming soon. Image shown is a
+              licensed stock photo.
+            </p>
           </div>
 
           <div className="prose-site max-w-none">

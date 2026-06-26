@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
+import SiteImage from "@/components/SiteImage";
 import BillBreakdown from "@/components/BillBreakdown";
 import CTASection from "@/components/CTASection";
 import { buildMetadata } from "@/lib/seo";
@@ -28,6 +29,18 @@ export default function ServicesPage() {
 
       <Section>
         <div className="mx-auto max-w-3xl space-y-14">
+          {/* Banner photo */}
+          <div className="aspect-[16/9] overflow-hidden rounded-2xl border border-navy/10 shadow-card">
+            <SiteImage
+              src="/images/panels.jpg"
+              alt="Rooftop solar panels under a clear sunny sky"
+              width={1600}
+              height={882}
+              className="h-full w-full object-cover"
+              sizes="(max-width: 768px) 100vw, 768px"
+            />
+          </div>
+
           {/* Buy Solar */}
           <div id="buy" className="scroll-mt-24">
             <p className="eyebrow mb-2">Option one</p>

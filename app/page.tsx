@@ -47,12 +47,12 @@ export default function HomePage() {
             </div>
           </div>
           <div className="relative">
-            <div className="overflow-hidden rounded-2xl border border-white/15 shadow-lift">
+            <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-white/15 shadow-lift">
               <SiteImage
-                src="/images/hero-rooftop-solar.svg"
-                alt="A central Illinois home with rooftop solar panels under a bright sun"
-                width={800}
-                height={600}
+                src="/images/hero.jpg"
+                alt="A modern central Illinois home with rooftop solar panels"
+                width={1600}
+                height={2400}
                 priority
                 className="h-full w-full object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

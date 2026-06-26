@@ -1,46 +1,41 @@
-# Image swap guide
+# Image credits and swap notes
 
-The site ships with clean, branded **SVG placeholders** so there are no broken
-images and nothing copyrighted is bundled. Replace them with real, licensed
-photos before (or shortly after) launch.
+The site now uses **real, licensed stock photos** (Pexels License: free for
+commercial use, no attribution required). Credits are listed below as a courtesy
+and for your records. All images are served locally through `next/image` via
+`components/SiteImage.tsx`.
 
-## How to swap
+## Photos in use
 
-**Easiest:** keep the same filename. Drop a real photo into `/public/images/`
-using the exact name below (you can change the extension, then update the `src`
-in the page that uses it). All images render through `<SiteImage />`
-(`components/SiteImage.tsx`), which uses `next/image` for lazy loading and
-optimization.
-
-If you change extensions (for example `.svg` to `.jpg`), update the matching
-`src="/images/..."` value in the page that references it. A quick project-wide
-search for the filename will show every place it is used.
-
-## Files to replace
-
-| File | Used on | Suggested photo | Free sources / search terms |
+| File | Used on | Subject | Source / credit |
 | --- | --- | --- | --- |
-| `hero-rooftop-solar.svg` | Home hero | Modern home with rooftop solar, daylight | Unsplash / Pexels: "rooftop solar home", "residential solar panels house" |
-| `jose-portrait.svg` | About, Home | Jose's real professional headshot | Provided by Jose (preferred). Keep portrait ~600x700. |
-| `central-illinois-home.svg` | About, Locations | Midwest single-family home, farmland backdrop | Unsplash / Pexels: "midwest house", "illinois suburban home" |
-| `solar-panels.svg` | Services | Close-up solar panel array, blue sky | Unsplash / Pexels: "solar panels close up", "photovoltaic array" |
-| `../og.svg` | Social share card | 1200x630 branded card (export to `og.png`) | See note below |
+| `hero.jpg` | Home hero | Modern home with rooftop solar | Pexels (Pexels License) — https://www.pexels.com/photo/sustainable-energy-modern-brick-house-exterior-31912311/ |
+| `about.jpg` | About page | Installer placing solar panels | Pexels, photo by Trinh Trần — https://www.pexels.com/photo/a-man-installing-solar-panels-14613939/ |
+| `panels.jpg` | Services banner | Solar panel array, sunny sky | Pexels, via Pixabay — https://www.pexels.com/photo/blue-solar-panels-under-sunny-sky-371900/ |
+| `home.jpg` | Location pages | Suburban family home | Pexels, photo by Curtis Adams — https://www.pexels.com/photo/american-suburban-family-house-4469133/ |
+| `../og.jpg` | Social share card (1200x630) | Solar panels (cropped from panels.jpg) | Pexels, via Pixabay — same as panels.jpg |
+| `../icon.svg` | Favicon | Sun mark (brand icon) | First-party (kept as SVG; correct for icons) |
 
-## Licensing reminder
+## Still to add
 
-- **Unsplash** and **Pexels** images are free for commercial use; attribution is
-  appreciated but not required. Confirm the current license on each photo.
-- Prefer **Ion Solar approved** marketing assets where available, and Jose's own
-  photos for anything showing him or his work.
-- Do not use Google Images results or competitor photos.
+- **Jose's real professional headshot.** The About page currently shows a
+  licensed stock photo of a solar installer as an honest stand-in (it is not
+  presented as Jose). When you have Jose's photo, drop it in as
+  `public/images/jose.jpg` and update the `src` in `app/about/page.tsx`
+  (the `SiteImage` in the left column) to `/images/jose.jpg`, with a portrait
+  aspect (the container uses `aspect-[3/4]`). Then remove the "photo coming
+  soon" note just below it.
 
-## Social (Open Graph) image
+## How to swap any photo
 
-`og.svg` is a starting design. Most social platforms (Facebook, LinkedIn, X) do
-**not** render SVG share images reliably. For best results, export a
-**1200x630 PNG** named `og.png`, place it in `/public`, and update
-`DEFAULT_OG_IMAGE` in `lib/seo.ts` to `"/og.png"`.
+Keep the same filename: replace the file in `public/images/` (or `public/og.jpg`)
+with your new image at a similar aspect ratio. If you change the filename or
+extension, update the matching `src="/images/..."` in the page that uses it
+(a project-wide search for the filename shows every reference). `next/image`
+handles optimization and lazy loading automatically.
 
-## Add photo credits here as you swap
+## Licensing
 
-- (example) hero-rooftop-solar.jpg — Photo by [Name] on Unsplash, [link]
+Pexels images are free for commercial use, and attribution is appreciated but
+not required. Prefer Ion Solar approved assets and Jose's own photos where
+available. Do not use Google Images results or competitor photos.

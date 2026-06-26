@@ -5,7 +5,7 @@ import { business, formattedAddress } from "@/siteConfig";
 export const SITE_URL = business.url;
 
 /** Default social share image (1200x630 recommended). See TODO to add og.png. */
-export const DEFAULT_OG_IMAGE = "/og.svg";
+export const DEFAULT_OG_IMAGE = "/og.jpg";
 
 interface BuildMetaArgs {
   title: string;

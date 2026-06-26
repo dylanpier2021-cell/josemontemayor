@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
+import SiteImage from "@/components/SiteImage";
 import LeadForm from "@/components/LeadForm";
 import CTASection from "@/components/CTASection";
 import { buildMetadata } from "@/lib/seo";
@@ -50,6 +51,16 @@ export default function LocationPage({
       <Section>
         <div className="grid gap-10 lg:grid-cols-[1.6fr,1fr]">
           <div>
+            <div className="mb-8 aspect-[16/9] overflow-hidden rounded-2xl border border-navy/10 shadow-card">
+              <SiteImage
+                src="/images/home.jpg"
+                alt={`A family home in the ${loc.city}, Illinois area`}
+                width={1600}
+                height={1067}
+                className="h-full w-full object-cover"
+                sizes="(max-width: 1024px) 100vw, 60vw"
+              />
+            </div>
             <div className="prose-site max-w-none">
               {loc.sections.map((section) => (
                 <div key={section.heading}>
