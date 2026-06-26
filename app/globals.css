@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-cream text-ink antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight text-navy;
+    text-wrap: balance;
+  }
+
+  /* Visible, accessible focus ring everywhere. */
+  :where(a, button, input, textarea, select, [tabindex]):focus-visible {
+    @apply outline-none ring-2 ring-sun ring-offset-2 ring-offset-cream rounded-sm;
+  }
+
+  /* Respect reduced motion. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-base font-semibold transition-all duration-200 focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-sun text-navy-dark shadow-card hover:bg-sun-soft hover:shadow-lift;
+  }
+
+  .btn-secondary {
+    @apply btn border-2 border-navy/15 bg-white text-navy hover:border-navy/30 hover:bg-cream-dark;
+  }
+
+  .btn-ghost {
+    @apply btn bg-white/10 text-white ring-1 ring-white/30 hover:bg-white/20;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-forest-mid;
+  }
+
+  .card {
+    @apply rounded-2xl border border-navy/10 bg-white p-6 shadow-card;
+  }
+
+  .link-underline {
+    @apply font-semibold text-ocean underline decoration-sun decoration-2 underline-offset-4 hover:text-navy;
+  }
+}
+
+/* Readable long-form article styling for blog posts and legal pages. */
+.prose-site {
+  @apply text-[1.0625rem] leading-relaxed text-ink/90;
+}
+.prose-site h2 {
+  @apply mt-10 mb-3 text-2xl font-bold text-navy;
+}
+.prose-site h3 {
+  @apply mt-7 mb-2 text-xl font-semibold text-navy;
+}
+.prose-site p {
+  @apply mb-4;
+}
+.prose-site ul {
+  @apply mb-5 ml-5 list-disc space-y-2 marker:text-sun;
+}
+.prose-site ol {
+  @apply mb-5 ml-5 list-decimal space-y-2 marker:text-sun marker:font-semibold;
+}
+.prose-site a {
+  @apply link-underline;
+}
+.prose-site strong {
+  @apply font-semibold text-navy;
+}
