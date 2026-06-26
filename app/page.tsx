@@ -68,8 +68,8 @@ export default function HomePage() {
           <div>
             <SectionHeading
               eyebrow="The honest hook"
-              title="Nothing on your bill is free"
-              intro="Your money is split between the energy you use, the poles and wires that deliver it, and taxes and fees. A big chunk is fixed cost you pay no matter how little power you use. After decades of payments, you still own none of it."
+              title="See exactly what you are paying for"
+              intro="Your money is split between the energy you use, the poles and wires that deliver it, and taxes and fees. A big chunk is fixed cost that stays the same each month. Owning your own system lets you keep more of that money and build something that is truly yours."
             />
             <Link href="/services#read-your-bill" className="mt-6 inline-block link-underline">
               See how your bill breaks down
@@ -88,28 +88,29 @@ export default function HomePage() {
         />
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           <FeatureCard
-            title="Buy Solar (Own Your System)"
-            href="/services#buy"
-            cta="Learn more"
-          >
-            Own your system with cash or a loan. We cover long-term savings and
-            what the 2026 federal tax credit change means for buyers.
-          </FeatureCard>
-          <FeatureCard
-            title="Solar Through a PPA"
+            title="No-Cost Solar (State Agreement)"
             href="/services#ppa"
             cta="Learn more"
           >
-            Little or no money down with a power purchase agreement. We cover the
-            honest pros and cons so there are no surprises.
+            Go solar with $0 down. If your home qualifies, it is fully covered, so
+            you keep your money and start saving from day one.
+          </FeatureCard>
+          <FeatureCard
+            title="Own Your System"
+            href="/services#buy"
+            cta="Learn more"
+          >
+            Prefer to purchase? Own your system and keep every bit of the
+            long-term savings, plus the Illinois incentives that help you get
+            there.
           </FeatureCard>
           <FeatureCard
             title="Read Your Electric Bill"
             href="/services#read-your-bill"
             cta="Learn more"
           >
-            Supply, delivery, taxes and fees, and how much is fixed cost. The best
-            place to start if you are not sure.
+            See where your money goes across supply, delivery, and taxes, so you
+            can keep more of it. A great place to start.
           </FeatureCard>
         </div>
       </Section>

@@ -7,14 +7,14 @@
 const segments = [
   {
     label: "Supply",
-    blurb: "The electricity itself. The only part solar can directly offset.",
+    blurb: "The electricity itself. This is the part solar directly offsets, so you keep more of that money.",
     pct: 45,
     color: "bg-ocean",
   },
   {
     label: "Delivery",
     blurb:
-      "Poles, wires, maintenance, and the utility's regulated return. Includes fixed charges you pay even at near-zero usage.",
+      "Poles, wires, maintenance, and the utility's regulated return. Includes fixed charges that stay steady, so when you generate your own power the savings show up on the supply side.",
     pct: 45,
     color: "bg-forest-mid",
   },

@@ -59,17 +59,25 @@ professional.
 
 ## 3. Content to swap before/after launch
 
+- [ ] **DOOR-PITCH VERBIAGE (placeholder).** Incorporate Jose's real in-person
+      door-pitch wording so the website mirrors his pitch word for word. When he
+      provides the script, weave it through the Home hero, the Services PPA
+      section, and the About page so the online message matches what homeowners
+      hear at the door. A matching in-code marker is in
+      `app/services/page.tsx` (search for "DOOR-PITCH PLACEHOLDER").
+
 - [ ] **Testimonials.** `components/Testimonials.tsx` contains clearly-marked
       SAMPLE reviews. Replace with real, permissioned customer quotes. Do not
       publish fabricated reviews.
 
-- [ ] **Images.** Replace branded SVG placeholders in `public/images/` with real
-      licensed photos and Jose's real headshot. See
-      `public/images/SWAP-IMAGES.md`.
+- [x] **Images.** Real, licensed all-black-panel photos are installed in
+      `public/images/` (hero, panels, Ion installer, suburban home) plus Jose's
+      own photo. See `public/images/SWAP-IMAGES.md` for credits and swap notes.
+      Still optional: a higher-resolution professional headshot for Jose, and
+      real blurred bill images for `components/BillExample.tsx`.
 
-- [ ] **Social Open Graph image.** Export a 1200x630 `og.png` and point
-      `DEFAULT_OG_IMAGE` in `lib/seo.ts` to it (SVG share images are unreliable
-      on social platforms).
+- [x] **Social Open Graph image.** A real 1200x630 `og.jpg` (all-black-panel
+      home) is in place and wired in `lib/seo.ts`.
 
 - [ ] **Social links.** None included (per direction). Add to
       `siteConfig.business.social` when available; the footer will render them.

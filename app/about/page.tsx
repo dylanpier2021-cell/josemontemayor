@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
-import Section, { SectionHeading } from "@/components/Section";
+import Section from "@/components/Section";
 import SiteImage from "@/components/SiteImage";
 import VeteranBadge from "@/components/VeteranBadge";
 import CTASection from "@/components/CTASection";
@@ -11,9 +11,20 @@ import { business, formattedAddress } from "@/siteConfig";
 export const metadata: Metadata = buildMetadata({
   title: "About Jose Montemayor",
   description:
-    "Meet Jose Montemayor, a disabled U.S. Army combat veteran and independent solar consultant serving central Illinois with honesty-first guidance.",
+    "Jose Montemayor is a U.S. Army combat veteran and solar veteran since 2012, from utility-scale solar farms to your rooftop. Honest, kitchen-table guidance for central Illinois.",
   path: "/about",
 });
+
+const armyValues = [
+  "Leadership",
+  "Loyalty",
+  "Duty",
+  "Respect",
+  "Selfless Service",
+  "Honor",
+  "Integrity",
+  "Personal Courage",
+];
 
 export default function AboutPage() {
   return (
@@ -21,7 +32,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         title="I served my country. Now I want to serve my community."
-        intro="My name is Jose Montemayor. I am a disabled U.S. Army combat veteran and an independent solar consultant working with Ion Solar across central Illinois."
+        intro="I am Jose Montemayor. I am a U.S. Army combat veteran who served four tours in Iraq, and I have worked in solar since 2012, from large utility-scale solar farms all the way to your rooftop."
         crumbs={[
           { name: "Home", path: "/" },
           { name: "About", path: "/about" },
@@ -29,70 +40,81 @@ export default function AboutPage() {
       />
 
       <Section>
-        <div className="grid items-start gap-10 lg:grid-cols-[1fr,1.4fr]">
+        <div className="grid items-start gap-10 lg:grid-cols-[1fr,1.5fr]">
           <div className="lg:sticky lg:top-24">
-            <div className="aspect-[3/4] overflow-hidden rounded-2xl border border-navy/10 shadow-card">
-              <SiteImage
-                src="/images/about.jpg"
-                alt="A solar professional installing panels on a rooftop"
-                width={1600}
-                height={2133}
-                className="h-full w-full object-cover"
-                sizes="(max-width: 1024px) 100vw, 33vw"
-              />
+            <div className="mx-auto max-w-xs">
+              {/* SWAP POINT: replace /images/jose.jpg with a higher-resolution
+                  professional headshot from Jose when available (square or
+                  portrait works). Source file is currently 400x400. */}
+              <div className="aspect-square overflow-hidden rounded-2xl border border-navy/10 shadow-card">
+                <SiteImage
+                  src="/images/jose.jpg"
+                  alt="Jose Montemayor, U.S. Army veteran and solar consultant"
+                  width={400}
+                  height={400}
+                  priority
+                  className="h-full w-full object-cover"
+                  sizes="(max-width: 1024px) 80vw, 320px"
+                />
+              </div>
+              <div className="mt-4 flex justify-center">
+                <VeteranBadge />
+              </div>
             </div>
-            <div className="mt-4">
-              <VeteranBadge />
-            </div>
-            <p className="mt-2 text-xs text-ink/55">
-              A professional photo of Jose is coming soon. Image shown is a
-              licensed stock photo.
-            </p>
           </div>
 
           <div className="prose-site max-w-none">
-            <h2>Why I do this</h2>
+            <h2>From the Army to solar</h2>
             <p>
-              I spent years in uniform learning what it means to be accountable
-              for other people. You do not get to cut corners when the stakes are
-              real. You tell the truth, you do the work, and you stand behind it.
-              When I came home, I wanted a way to keep serving with that same
-              standard. Helping my neighbors understand their energy costs turned
-              out to be it.
+              Four tours in Iraq taught me what it means to be responsible for
+              other people. You do the work, you tell the truth, and you stand
+              behind it. Those years shaped how I treat everyone I work with
+              today.
             </p>
             <p>
-              Most homeowners I meet are not anti-solar and they are not ready to
-              sign anything either. They are curious and a little skeptical, and
-              they have every right to be. They have been paying an electric bill
-              for twenty years or more without anyone ever sitting down to
-              explain where that money actually goes. That is the gap I want to
-              close.
+              When I came home, I found a mission in solar. I started in 2012 as a
+              direct solar consultant at SolarCity in southern California, sitting
+              with families and helping them understand their power and their
+              options. I have been in the industry ever since.
             </p>
 
-            <h2>My honesty-first promise</h2>
+            <h2>Solar at every scale</h2>
             <p>
-              I am not here to talk anyone into anything. My first job is to help
-              you understand your own bill, the part you control and the part you
-              do not. My second job is to lay out your options clearly, including
-              the recent changes to federal tax credits and Illinois net
-              metering that affect the math. If solar does not make sense for your
-              home, I will tell you that plainly. That is not bad for business.
-              That is the business.
+              In 2016, I co-founded BFA Energy LLC, a national solar developer, and
+              I serve as its Chief Operating Officer. We develop utility-scale
+              solar farms, power purchase agreements, and solar plus storage
+              projects. That work gave me a big-picture view of how clean energy
+              is built and paid for across the country.
             </p>
-            <ul>
-              <li>I explain, I do not pressure.</li>
-              <li>I use real numbers for your home, never inflated promises.</li>
-              <li>I tell you the downsides, not just the upsides.</li>
-              <li>I treat your time and your trust as things I have to earn.</li>
+            <p>
+              Now I bring that experience down to the kitchen table. Working as an
+              independent consultant through Ion Solar, I help central Illinois
+              homeowners use the same programs and technology that power those big
+              projects to lower their own bills and own a piece of their energy
+              future.
+            </p>
+
+            <h2>The values I lead with</h2>
+            <p>
+              The Army gave me a clear set of values, and I still carry them into
+              every conversation:
+            </p>
+            <ul className="not-prose mt-2 flex flex-wrap gap-2">
+              {armyValues.map((v) => (
+                <li
+                  key={v}
+                  className="rounded-full border border-forest/20 bg-forest/5 px-3 py-1 text-sm font-medium text-forest"
+                >
+                  {v}
+                </li>
+              ))}
             </ul>
-
-            <h2>How I work</h2>
-            <p>
-              As an independent consultant working with Ion Solar, I can walk you
-              through both owning a system outright and going solar through a
-              power purchase agreement. We start with a free, no-pressure review
-              of your electric bill. From there, you decide what makes sense, on
-              your timeline, with no obligation.
+            <p className="mt-5">
+              That is exactly why I will only ever recommend solar when it
+              genuinely helps you. If the numbers put you in a better spot, a
+              better rate or protecting what you already have, I will show you how.
+              If they do not, I will tell you straight. You will always get an
+              honest answer from me.
             </p>
 
             <h2>Who I serve</h2>
@@ -100,7 +122,7 @@ export default function AboutPage() {
               I work with homeowners across central Illinois, with my core markets
               being the Champaign and Bloomington areas and the surrounding
               communities. If you are nearby and you have an electric bill, I am
-              glad to help you understand it.
+              glad to help you understand it and see what is possible.
             </p>
           </div>
         </div>
@@ -158,8 +180,8 @@ export default function AboutPage() {
       </Section>
 
       <CTASection
-        title="Have questions about your electric bill?"
-        body="Bring it to someone who will give you a straight answer. The review is free and there is never any obligation."
+        title="Want a straight answer about your electric bill?"
+        body="Bring it to a veteran who will give it to you straight. The review is free and there is never any obligation."
       />
     </>
   );

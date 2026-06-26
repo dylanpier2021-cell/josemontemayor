@@ -36,7 +36,7 @@ export const locations: Location[] = [
     metaDescription:
       "Honest solar guidance for Champaign, Illinois homeowners. Understand your Ameren bill and whether solar is worth it. Free, no-pressure bill review.",
     heroIntro:
-      "If your Ameren bill in Champaign keeps climbing, a clear bill review can show you exactly where that money is going before you decide anything.",
+      "If you want to take control of your Ameren bill in Champaign, a clear bill review can show you exactly where your money is going so you can keep more of it.",
     sections: [
       {
         heading: "Solar that fits a Champaign home",
@@ -52,7 +52,7 @@ export const locations: Location[] = [
       "Served by Ameren Illinois",
     ],
     utilityNote:
-      "Champaign is served by Ameren Illinois. New solar customers since January 1, 2025 are on net billing, which credits exported energy at the supply rate rather than the full retail rate.",
+      "Champaign is served by Ameren Illinois. New solar customers since January 1, 2025 are on net billing, so the energy you send back to the grid still earns you credit at the supply rate.",
     nearby: ["Urbana", "Savoy", "Mahomet", "St. Joseph"],
   },
   {
@@ -71,7 +71,7 @@ export const locations: Location[] = [
       {
         heading: "A community that thinks long term",
         paragraphs: [
-          "Electricity is one of the few household costs that tends to rise every year while leaving you nothing to own at the end. For homeowners planning to stay put, that long horizon is exactly where solar can pay off, or where it clearly does not.",
+          "Electricity is one of the few household costs you keep paying every year with nothing to show for it, while solar lets you own your energy and put that money toward something that is yours. For homeowners planning to stay put, that long horizon is exactly where solar can pay off the most.",
           "Bloomington has a solid base of well-kept, owner-occupied homes, which is often a good starting point. Still, the right answer depends on your usage, your roof, and your budget. I will give you the honest version.",
         ],
       },
@@ -82,7 +82,7 @@ export const locations: Location[] = [
       "Served by Ameren Illinois",
     ],
     utilityNote:
-      "Bloomington is served by Ameren Illinois. New solar customers since January 1, 2025 are on net billing, which credits exported energy at the supply rate rather than the full retail rate.",
+      "Bloomington is served by Ameren Illinois. New solar customers since January 1, 2025 are on net billing, so the energy you send back to the grid still earns you credit at the supply rate.",
     nearby: ["Normal", "Hudson", "Downs", "Heyworth"],
   },
 ];

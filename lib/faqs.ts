@@ -6,20 +6,20 @@ export interface Faq {
 /** General FAQs used on the homepage teaser and the contact page. */
 export const generalFaqs: Faq[] = [
   {
-    q: "Is a consultation really free, and will I get pressured to buy?",
-    a: "Yes, the bill review and consultation are free, and no, you will not be pressured. The goal is to help you understand your electric bill and your options. If solar does not make sense for your home, I will tell you that plainly.",
+    q: "Is a consultation really free, and is it truly no pressure?",
+    a: "Yes, the bill review and consultation are free, and you stay completely in control. The goal is to help you understand your electric bill and your options so you can make the best choice for your home. If solar is the right fit, great. If another path saves you more, I will tell you that plainly.",
   },
   {
     q: "Do I have to put money down to go solar?",
-    a: "Not always. Some homeowners buy their system with cash or a loan and own it outright. Others use a power purchase agreement, which can require little or no money down. We walk through both so you can see which fits your situation.",
+    a: "You have choices. Some homeowners buy their system with cash or a loan and own it outright. Others use a power purchase agreement, which can start with little or no money down. We walk through both so you can pick the path that keeps the most money in your pocket.",
   },
   {
-    q: "Did the federal solar tax credit really go away?",
-    a: "The 30 percent federal credit for homeowners who buy and own their system ended for systems placed in service after December 31, 2025. Third-party-owned options such as leases and power purchase agreements may still capture a federal credit through the system owner. Tax situations vary, so always confirm with a licensed tax professional.",
+    q: "Can I still capture value from the federal solar tax credit?",
+    a: "The 30 percent federal credit for homeowners who buy and own their system applied to systems placed in service through December 31, 2025. Going forward, third-party-owned options such as leases and power purchase agreements can still capture a federal credit through the system owner, and that value can be passed along to you. Tax situations vary, so always confirm with a licensed tax professional.",
   },
   {
     q: "What changed with net metering in Illinois?",
-    a: "Starting January 1, 2025, new ComEd and Ameren solar customers moved to net billing. Energy you send to the grid is now credited at the supply portion of the rate rather than the full retail rate. Systems connected before that date were grandfathered into the old rules. This change matters for the math, and we factor it in honestly.",
+    a: "Starting January 1, 2025, new ComEd and Ameren solar customers use net billing. Energy you send to the grid earns you a credit at the supply portion of the rate, while systems connected before that date keep the earlier rules. Either way, we factor the real numbers in honestly so you can see exactly how much you save.",
   },
   {
     q: "What areas do you serve?",

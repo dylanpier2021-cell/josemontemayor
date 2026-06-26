@@ -9,13 +9,13 @@
 const placeholderTestimonials = [
   {
     quote:
-      "Jose did not try to sell me anything. He sat down, explained my bill, and showed me what was fixed and what was not. I finally understood what I was paying for.",
+      "Jose did not try to sell me anything. He sat down, explained my bill, and showed me exactly where my money was going and how to keep more of it. I finally understood what I was paying for.",
     name: "Sample Homeowner",
     location: "Champaign, IL",
   },
   {
     quote:
-      "I was skeptical about solar. Jose gave me the honest math for my house, including the parts that were not in my favor. That is why I trusted him.",
+      "I was skeptical about solar. Jose gave me the honest math for my house, the full picture so I could see how to come out ahead. That is why I trusted him.",
     name: "Sample Homeowner",
     location: "Bloomington, IL",
   },

@@ -3,7 +3,7 @@ import { business } from "@/siteConfig";
 
 /** Reusable closing call-to-action band. Soft, no-pressure messaging. */
 export default function CTASection({
-  title = "Curious where your electric bill money is really going?",
+  title = "Want to keep more of your electric bill money in your pocket?",
   body = "Get a free, no-pressure bill review. I will walk you through your charges and tell you honestly whether solar makes sense for your home.",
   primaryLabel = "Get my free bill review",
   primaryHref = "/contact",

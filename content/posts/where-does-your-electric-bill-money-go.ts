@@ -7,14 +7,14 @@ export const post: BlogPost = {
   description:
     "A short, plain look at where your central Illinois electric bill money goes: supply, delivery, taxes and fees, and why so much of it stays fixed.",
   excerpt:
-    "Most of us pay the electric bill without reading it. Here is what those dollars are really buying, and why a big piece never goes down.",
+    "Most of us pay the electric bill without reading it. Here is what those dollars are really buying, and how knowing the breakdown helps you keep more of your money.",
   date: "2026-02-10",
   readingTime: "3 min read",
   tags: ["Electric Bills", "Education"],
   body: [
     {
       type: "p",
-      text: "Most of us pay the electric bill the same way every month. We glance at the total, wince a little, and click pay. We almost never read the rest. But there is a simple story in those line items, and once you see it, you cannot unsee it.",
+      text: "Most of us pay the electric bill the same way every month. We glance at the total and click pay. We almost never read the rest. But there is a simple story in those line items, and once you see it, you are in control of it.",
     },
     {
       type: "p",
@@ -30,15 +30,15 @@ export const post: BlogPost = {
     },
     {
       type: "h2",
-      text: "2. Delivery: the part you cannot turn off",
+      text: "2. Delivery: the steady part of your bill",
     },
     {
       type: "p",
-      text: "Delivery pays for the poles, wires, substations, and maintenance that move power to your home. It includes a flat customer charge plus per-kilowatt-hour delivery charges. Here is the part most people miss. You pay the customer charge no matter how little electricity you use. Even in a month you are barely home, it still shows up.",
+      text: "Delivery pays for the poles, wires, substations, and maintenance that move power to your home. It includes a flat customer charge plus per-kilowatt-hour delivery charges. Here is a helpful thing to know. The customer charge stays steady whether you use a little electricity or a lot, so once you spot it on your bill it is easy to plan around.",
     },
     {
       type: "p",
-      text: "Delivery charges also tend to climb year after year, and they are largely outside your control. This is the quiet reason a bill can grow even when your usage does not.",
+      text: "Delivery charges also tend to climb year after year, and they follow their own schedule. Knowing this is the quiet reason it pays to understand how your bill is built, so you can make the most of the parts you do control.",
     },
     {
       type: "h2",
@@ -51,7 +51,7 @@ export const post: BlogPost = {
     {
       type: "callout",
       title: "The honest takeaway",
-      text: "A meaningful share of your bill is fixed cost you pay regardless of how careful you are. That is why the real question is not only how much power you use. It is also how your bill is built.",
+      text: "A meaningful share of your bill is fixed cost that stays steady month to month. That is why the real question is not only how much power you use. It is also how your bill is built, because understanding both is how you start saving.",
     },
     {
       type: "h2",
@@ -59,7 +59,7 @@ export const post: BlogPost = {
     },
     {
       type: "p",
-      text: "People often expect solar to erase the whole bill. It does not. Solar offsets supply, the energy bucket. It does not eliminate the fixed delivery charges, and since the 2025 net billing change in Illinois, energy you send back to the grid is credited at the supply rate rather than the full retail rate. None of that makes solar a bad idea. It just means an honest estimate has to account for all of it.",
+      text: "People often ask exactly how much solar can save them. Here is the honest answer. Solar offsets supply, the energy bucket, so you generate your own power and pay less for it. The fixed delivery charges stay steady, and since the 2025 net billing change in Illinois, energy you send back to the grid earns you a credit at the supply rate. All of that makes solar a smart move when the numbers fit your home. It just means an honest estimate accounts for all of it.",
     },
     {
       type: "p",

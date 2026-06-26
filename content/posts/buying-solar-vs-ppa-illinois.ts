@@ -27,7 +27,7 @@ export const post: BlogPost = {
     },
     {
       type: "p",
-      text: "One honest update for 2026. The 30 percent federal residential tax credit that buyers used to claim ended for systems placed in service after December 31, 2025. So a homeowner who buys today generally cannot count on that credit anymore. Illinois Shines, which pays for the renewable energy credits your system produces, can still help, and the owner is usually the one who benefits. Tax situations vary, so confirm anything tax related with a licensed professional.",
+      text: "One honest update for 2026. The 30 percent federal residential tax credit applied to systems placed in service through December 31, 2025, so a homeowner buying today plans around the strong incentives that are still in place. Illinois Shines, which pays you for the renewable energy credits your system produces, remains a real win, and as the owner you are usually the one who keeps that benefit. Tax situations vary, so confirm anything tax related with a licensed professional.",
     },
     {
       type: "h2",
@@ -39,7 +39,7 @@ export const post: BlogPost = {
     },
     {
       type: "p",
-      text: "The tradeoffs are real. Many PPAs include an annual price increase called an escalator, so ask what your rate will be in later years. You also do not build equity, since you do not own the system. And when you sell your home, the buyer usually needs to take over the agreement, so understand the transfer terms before you sign.",
+      text: "It helps to know how a PPA works. Many PPAs include an annual price change called an escalator, so ask what your rate will be in later years and pick a plan you feel good about. Equity stays with the company that owns the system, which is part of how you keep your upfront cost so low. And when you sell your home, the buyer usually takes over the agreement, so review the transfer terms up front and you are all set.",
     },
     {
       type: "callout",
@@ -53,14 +53,14 @@ export const post: BlogPost = {
     {
       type: "ul",
       items: [
-        "Since January 1, 2025, new solar customers are on net billing, so exported energy is credited at the supply rate, not the full retail rate.",
+        "Since January 1, 2025, new solar customers are on net billing, so the energy you export earns you credit at the supply rate, and the power you use on-site saves you the most.",
         "Proper system sizing matters more than ever, because using your own power on-site is worth more than exporting it.",
         "An honest estimate should be built on today's rules, not on incentives that have expired.",
       ],
     },
     {
       type: "p",
-      text: "There is no universal right answer here, only the right answer for your home and your budget. If you want, I will run both options side by side using your actual electric bill, free and with no pressure, so you can decide for yourself.",
+      text: "There is one right answer for your home and your budget. If you want, I will run both options side by side using your actual electric bill, free and with no pressure, so you can decide for yourself.",
     },
   ],
 };

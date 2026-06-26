@@ -8,7 +8,7 @@ export const post: BlogPost = {
   description:
     "A short, honest framework for deciding if solar is worth it for your central Illinois home, including the variables that actually drive the math.",
   excerpt:
-    "Solar is not worth it for everyone. Here is the honest framework for deciding whether it pays off for your central Illinois home.",
+    "Solar pays off best for the right home. Here is the honest framework for deciding whether it saves you money in central Illinois.",
   date: "2026-05-27",
   readingTime: "4 min read",
   tags: ["Solar Math", "Central Illinois"],
@@ -32,20 +32,20 @@ export const post: BlogPost = {
         "Your roof. Orientation, shade, and condition all matter, and a roof that needs replacing soon changes the picture.",
         "How you pay. Owning with cash or a loan versus a PPA leads to very different numbers.",
         "Incentives. Illinois Shines can pay for the renewable energy credits your system produces, and the utility offers an upfront rebate per kilowatt installed.",
-        "The 2025 net billing change. Exported energy is now credited at the supply rate, not the full retail rate, so using your own power on-site is worth more.",
+        "The 2025 net billing change. Exported energy is credited at the supply rate, so using your own power on-site is worth even more and keeps more savings in your pocket.",
       ],
     },
     {
       type: "p",
-      text: "One honest note for 2026. The 30 percent federal residential tax credit for buyers ended for systems placed in service after December 31, 2025. That worsens the buy-side payback compared to a year ago, and a fair estimate has to reflect it. Confirm any tax question with a licensed professional.",
+      text: "One honest note for 2026. The 30 percent federal residential tax credit for buyers applied to systems placed in service through December 31, 2025. A fair estimate reflects today's rules so you see exactly what you will save now. Confirm any tax question with a licensed professional.",
     },
     {
       type: "h2",
-      text: "When solar is probably not worth it",
+      text: "When it pays to wait before going solar",
     },
     {
       type: "p",
-      text: "I would rather tell you the truth than make a sale. Solar is usually a poor fit if your roof is heavily shaded, if it needs replacement and you are not ready for that, if your electricity usage is very low, or if you plan to move soon and cannot recover the cost. There is no shame in any of those. Sometimes the right answer is to wait or to pass.",
+      text: "I would rather tell you the truth than make a sale. Solar saves the most when your roof gets good sun and is ready to go, when your electricity usage is meaningful, and when you plan to stay long enough to enjoy the savings. If those are not in place yet, waiting can be the smart move so your dollars work hardest when the time is right.",
     },
     {
       type: "callout",

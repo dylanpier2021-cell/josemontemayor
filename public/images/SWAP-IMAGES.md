@@ -1,41 +1,47 @@
 # Image credits and swap notes
 
-The site now uses **real, licensed stock photos** (Pexels License: free for
-commercial use, no attribution required). Credits are listed below as a courtesy
-and for your records. All images are served locally through `next/image` via
-`components/SiteImage.tsx`.
+The site uses **real, licensed stock photos** (Pexels License: free for
+commercial use, no attribution required) plus Jose's own photo. Credits are
+listed below for your records. All images are served locally through
+`next/image` via `components/SiteImage.tsx`.
+
+## Imagery rule: all-black panels
+
+Every solar-panel image on the site shows **all-black (monocrystalline) panels**,
+not blue/silver polycrystalline panels. Keep this aesthetic when swapping any
+photo.
 
 ## Photos in use
 
 | File | Used on | Subject | Source / credit |
 | --- | --- | --- | --- |
-| `hero.jpg` | Home hero | Modern home with rooftop solar | Pexels (Pexels License) — https://www.pexels.com/photo/sustainable-energy-modern-brick-house-exterior-31912311/ |
-| `about.jpg` | About page | Installer placing solar panels | Pexels, photo by Trinh Trần — https://www.pexels.com/photo/a-man-installing-solar-panels-14613939/ |
-| `panels.jpg` | Services banner | Solar panel array, sunny sky | Pexels, via Pixabay — https://www.pexels.com/photo/blue-solar-panels-under-sunny-sky-371900/ |
+| `hero.jpg` | Home hero | Rooftop with all-black solar panels | Pexels, photo by Budget Bizar — https://www.pexels.com/photo/modern-rooftop-solar-panels-and-tiled-roof-35726122/ |
+| `panels.jpg` | Services banner | Home with all-black rooftop solar | Pexels, photo by Robert So — https://www.pexels.com/photo/palm-trees-around-house-12284244/ |
+| `about.jpg` | Services (Ion section) | Installer placing an all-black panel | Pexels, photo by William Mead — https://www.pexels.com/photo/man-installing-solar-panels-6040783/ |
 | `home.jpg` | Location pages | Suburban family home | Pexels, photo by Curtis Adams — https://www.pexels.com/photo/american-suburban-family-house-4469133/ |
-| `../og.jpg` | Social share card (1200x630) | Solar panels (cropped from panels.jpg) | Pexels, via Pixabay — same as panels.jpg |
+| `jose.jpg` | About page | Jose Montemayor (his own photo) | Provided by Jose (BFA Energy). See swap note below. |
+| `../og.jpg` | Social card (1200x630) | All-black solar home (cropped from panels.jpg) | Pexels, photo by Robert So |
 | `../icon.svg` | Favicon | Sun mark (brand icon) | First-party (kept as SVG; correct for icons) |
 
-## Still to add
+## Swap notes
 
-- **Jose's real professional headshot.** The About page currently shows a
-  licensed stock photo of a solar installer as an honest stand-in (it is not
-  presented as Jose). When you have Jose's photo, drop it in as
-  `public/images/jose.jpg` and update the `src` in `app/about/page.tsx`
-  (the `SiteImage` in the left column) to `/images/jose.jpg`, with a portrait
-  aspect (the container uses `aspect-[3/4]`). Then remove the "photo coming
-  soon" note just below it.
+- **Jose's headshot (`jose.jpg`).** The current file is a casual, low-resolution
+  (400x400) photo Jose provided. When he sends a higher-resolution professional
+  headshot, replace `public/images/jose.jpg` (keep it square or portrait). The
+  swap point is commented in `app/about/page.tsx` next to the `SiteImage`.
+- **Real bill images.** When Jose provides real, blurred photos of an actual
+  ComEd / Ameren bill, see the commented SWAP POINT in
+  `components/BillExample.tsx` to drop them in beside the matching tab.
 
 ## How to swap any photo
 
 Keep the same filename: replace the file in `public/images/` (or `public/og.jpg`)
-with your new image at a similar aspect ratio. If you change the filename or
-extension, update the matching `src="/images/..."` in the page that uses it
-(a project-wide search for the filename shows every reference). `next/image`
-handles optimization and lazy loading automatically.
+with a new image at a similar aspect ratio (and the all-black panel look). If you
+change the filename or extension, update the matching `src="/images/..."` in the
+page that uses it. `next/image` handles optimization and lazy loading.
 
 ## Licensing
 
-Pexels images are free for commercial use, and attribution is appreciated but
-not required. Prefer Ion Solar approved assets and Jose's own photos where
-available. Do not use Google Images results or competitor photos.
+Pexels images are free for commercial use, attribution appreciated but not
+required. Prefer Ion Solar approved assets and Jose's own photos where available.
+Do not use Google Images results or competitor photos.
