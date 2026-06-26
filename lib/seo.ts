@@ -85,12 +85,11 @@ export function localBusinessJsonLd() {
       "Illinois Shines incentives",
       "Electric bill analysis",
     ],
+    // Home-based service-area business: no street address, region + areaServed only.
     address: {
       "@type": "PostalAddress",
-      streetAddress: addr.street,
       addressLocality: addr.city,
       addressRegion: addr.region,
-      postalCode: addr.postalCode,
       addressCountry: "US",
     },
     areaServed: business.serviceAreas.map((city) => ({

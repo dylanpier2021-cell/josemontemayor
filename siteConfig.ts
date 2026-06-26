@@ -18,15 +18,12 @@
  *    re-submit your A2P brand + campaign so the carrier crawl matches the site.
  *
  * ---------------------------------------------------------------------------
- * ITEMS STILL TO FILL IN (see TODO.md) -> search for "TBD"
- * ---------------------------------------------------------------------------
- *  - business.address.*    (physical business address)
- *
- * CONFIRMED: business.phone = (309) 861-9894 (also the SMS sending number).
+ * CONFIRMED:
+ *  - business.phone = (309) 861-9894 (also the SMS sending number).
+ *  - Home-based sole proprietorship: NO public street address. We show the
+ *    service area (Champaign & Bloomington, IL) wherever an address would go.
  * =============================================================================
  */
-
-const ADDRESS_TBD = "[BUSINESS ADDRESS - TBD]";
 
 export const business = {
   /**
@@ -70,15 +67,22 @@ export const business = {
   phone: "(309) 861-9894",
   phoneHref: "+13098619894",
 
-  /** Physical business address (required for Contact + legal pages). */
+  /**
+   * Home-based sole proprietorship: there is NO public street address. We show
+   * the SERVICE AREA instead of a street everywhere an address would appear
+   * (Contact page, footer, legal pages, structured data). This is fully fine
+   * for a home-based sole proprietor.
+   */
   address: {
-    street: ADDRESS_TBD,
-    line2: "",
-    city: "[CITY - TBD]",
+    city: "Champaign & Bloomington",
     region: "IL",
-    postalCode: "[ZIP - TBD]",
     country: "USA",
   },
+  /** Short service-area label shown wherever an address would normally go. */
+  serviceAreaLabel: "Champaign & Bloomington, IL",
+  /** One-line service-area sentence for the footer and contact page. */
+  serviceAreaSentence:
+    "By appointment, serving Champaign, Bloomington, and central Illinois.",
 
   // --- Web -----------------------------------------------------------------
   /** Registered domain (spelled exactly as registered). */
@@ -99,14 +103,11 @@ export const business = {
   termsPath: "/terms",
 } as const;
 
-/** Full formatted address string for display (skips empty line2). */
-export const formattedAddress = [
-  business.address.street,
-  business.address.line2,
-  `${business.address.city}, ${business.address.region} ${business.address.postalCode}`,
-]
-  .filter(Boolean)
-  .join(", ");
+/**
+ * Display value used wherever an address would appear. Home-based business:
+ * this is the SERVICE AREA (city + state), never a street address.
+ */
+export const formattedAddress = business.serviceAreaLabel;
 
 /**
  * SMS consent language. Stored here (not in the form component) so the business

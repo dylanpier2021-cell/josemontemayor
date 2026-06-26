@@ -5,7 +5,7 @@ import LeadForm from "@/components/LeadForm";
 import FAQ from "@/components/FAQ";
 import { buildMetadata } from "@/lib/seo";
 import { generalFaqs } from "@/lib/faqs";
-import { business, formattedAddress } from "@/siteConfig";
+import { business } from "@/siteConfig";
 
 export const metadata: Metadata = buildMetadata({
   title: "Contact Jose Montemayor",
@@ -82,8 +82,9 @@ export default function ContactPage() {
                   {IconPin}
                 </span>
                 <div>
-                  <p className="text-sm font-semibold uppercase tracking-wide text-ink/50">Address</p>
-                  <address className="not-italic text-navy">{formattedAddress}</address>
+                  <p className="text-sm font-semibold uppercase tracking-wide text-ink/50">Service area</p>
+                  <address className="not-italic text-navy">{business.serviceAreaLabel}</address>
+                  <p className="mt-0.5 text-sm text-ink/60">{business.serviceAreaSentence}</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
@@ -97,9 +98,8 @@ export default function ContactPage() {
               </li>
             </ul>
 
-            {/* Service-area map. Keyless embed centered on central Illinois.
-                Once the business address is finalized, you can change the query
-                to the exact address. */}
+            {/* Service-area map. Home-based business, so this shows the central
+                Illinois service area rather than a street address. */}
             <div className="mt-8">
               <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-ink/50">
                 Serving central Illinois

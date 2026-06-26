@@ -190,7 +190,7 @@ export default function TermsPage() {
         <li>
           Email: <a href={`mailto:${business.email}`}>{business.email}</a>
         </li>
-        <li>Address: {formattedAddress}</li>
+        <li>Service area: {formattedAddress} (home-based, by appointment)</li>
       </ul>
     </LegalLayout>
   );

@@ -3,7 +3,7 @@ import Logo from "@/components/Logo";
 import VeteranBadge from "@/components/VeteranBadge";
 import { footerNav } from "@/lib/nav";
 import { locations } from "@/lib/locations";
-import { business, formattedAddress } from "@/siteConfig";
+import { business } from "@/siteConfig";
 
 export default function Footer() {
   const year = 2026; // Static export friendly. Update or compute server-side as needed.
@@ -39,13 +39,10 @@ export default function Footer() {
               </a>
             </div>
             <div>
-              <span className="font-semibold text-white">Address: </span>
-              <span>{formattedAddress}</span>
+              <span className="font-semibold text-white">Service area: </span>
+              <span>{business.serviceAreaLabel}</span>
             </div>
-            <div>
-              <span className="font-semibold text-white">Hours: </span>
-              <span>{business.hours}</span>
-            </div>
+            <div className="text-cream/65">{business.serviceAreaSentence}</div>
           </address>
         </div>
 

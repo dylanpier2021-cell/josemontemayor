@@ -4,18 +4,19 @@ This site is built and production-ready. A few items need Jose's real inputs or 
 final fact-check before launch. Search the codebase for `TBD` to find every
 placeholder.
 
-## 1. Business inputs still needed
-
-- [ ] **Physical business address.** Currently `[BUSINESS ADDRESS - TBD]` in
-      `siteConfig.ts` (`business.address`). A2P and the Contact + legal pages
-      need a real street address. Update the `street`, `city`, and `postalCode`
-      fields. Everything else (footer, contact page, Privacy, Terms, structured
-      data) reads from there automatically.
+## 1. Business inputs (all resolved)
 
 - [x] **Business phone / SMS number.** Set to **(309) 861-9894** in
       `siteConfig.ts` (`business.phone` / `business.phoneHref`). It flows to the
       header, footer, contact page, all forms, the SMS HELP line, and both legal
       pages.
+
+- [x] **Business address.** Resolved: home-based sole proprietorship with **no
+      public street address**. The site shows the service area
+      (**Champaign & Bloomington, IL**, by appointment) wherever an address would
+      appear, sourced from `siteConfig.ts` (`business.serviceAreaLabel` /
+      `business.serviceAreaSentence`). This is fully fine for a home-based sole
+      proprietor.
 
 > Confirmed and already wired: legal name "Jose Montemayor" (sole proprietor,
 > no DBA), domain `thesolarwayjose.com`, branded email
