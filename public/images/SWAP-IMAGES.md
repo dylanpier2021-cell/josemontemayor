@@ -19,16 +19,17 @@ photo.
 | `panels.jpg` | Services banner | Home with all-black rooftop solar | Pexels, photo by Robert So — https://www.pexels.com/photo/palm-trees-around-house-12284244/ |
 | `about.jpg` | Services (Ion section) | Installer placing an all-black panel | Pexels, photo by William Mead — https://www.pexels.com/photo/man-installing-solar-panels-6040783/ |
 | `home.jpg` | Location pages | Suburban family home | Pexels, photo by Curtis Adams — https://www.pexels.com/photo/american-suburban-family-house-4469133/ |
-| `jose.jpg` | About page | Jose Montemayor (his own photo) | Provided by Jose (BFA Energy). See swap note below. |
+| `jose-placeholder.svg` | About page | Neutral headshot placeholder (not a real person) | First-party placeholder. Awaiting Jose's professional photo — see swap note below. |
 | `../og.jpg` | Social card (1200x630) | All-black solar home (cropped from panels.jpg) | Pexels, photo by Robert So |
 | `../icon.svg` | Favicon | Sun mark (brand icon) | First-party (kept as SVG; correct for icons) |
 
 ## Swap notes
 
-- **Jose's headshot (`jose.jpg`).** The current file is a casual, low-resolution
-  (400x400) photo Jose provided. When he sends a higher-resolution professional
-  headshot, replace `public/images/jose.jpg` (keep it square or portrait). The
-  swap point is commented in `app/about/page.tsx` next to the `SiteImage`.
+- **Jose's headshot (`jose-placeholder.svg`).** The current file is a neutral,
+  brand-colored placeholder avatar — it does not depict any real person. When
+  Jose sends his professional headshot, add it to `public/images/` (keep it
+  square or portrait) and point the About page at it. The swap point is
+  commented in `app/about/page.tsx` next to the `SiteImage`.
 - **Real bill images.** When Jose provides real, blurred photos of an actual
   ComEd / Ameren bill, see the commented SWAP POINT in
   `components/BillExample.tsx` to drop them in beside the matching tab.

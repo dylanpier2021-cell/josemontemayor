@@ -250,15 +250,14 @@ export default function ServicesPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-navy">
-                    The same programs build big solar farms
+                    The same programs help you go solar
                   </h3>
                   <p className="mt-2 text-ink/80">
-                    Those same programs on your bill fund large utility-scale solar
-                    farms across Illinois. Jose has spent years developing these
-                    big solar projects. The same clean-energy push you already pay
-                    for is what makes residential solar possible for your home now.
-                    You have helped build the grid of the future. This is your
-                    chance to own a piece of it.
+                    Those programs fund solar across Illinois, and that same
+                    clean-energy push is what makes rooftop solar affordable for
+                    your home or business today. You have already been helping pay
+                    for the grid of the future. This is your chance to put your own
+                    roof space to work and own a piece of it.
                   </p>
                 </div>
                 <div>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  PLACEHOLDER HEADSHOT — neutral, brand-colored avatar.
+  This is a temporary stand-in. When Jose sends his own professional photo,
+  drop it in and update the swap point in app/about/page.tsx (see the comment
+  there). This file does NOT depict any real person.
+-->
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Professional headshot placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#13315c"/>
+      <stop offset="1" stop-color="#0b2545"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <!-- head + shoulders silhouette -->
+  <g fill="#dce4ef" opacity="0.92">
+    <circle cx="200" cy="158" r="62"/>
+    <path d="M88 360c0-62 50-112 112-112s112 50 112 112v40H88z"/>
+  </g>
+</svg>

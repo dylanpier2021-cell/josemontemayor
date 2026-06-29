@@ -11,7 +11,7 @@ import { business, formattedAddress } from "@/siteConfig";
 export const metadata: Metadata = buildMetadata({
   title: "About Jose Montemayor",
   description:
-    "Jose Montemayor is a U.S. Army combat veteran and solar veteran since 2012, from utility-scale solar farms to your rooftop. Honest, kitchen-table guidance for central Illinois.",
+    "Jose Montemayor is a U.S. Army combat veteran and an independent solar consultant working with central Illinois homeowners and businesses through Ion Solar. Honest, down-to-earth guidance on making the most of your own roof space.",
   path: "/about",
 });
 
@@ -32,7 +32,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         title="I served my country. Now I want to serve my community."
-        intro="I am Jose Montemayor. I am a U.S. Army combat veteran who served four tours in Iraq, and I have worked in solar since 2012, from large utility-scale solar farms all the way to your rooftop."
+        intro="I am Jose Montemayor, a U.S. Army combat veteran who served four tours in Iraq. Today I work as an independent solar consultant through Ion Solar, helping central Illinois homeowners and businesses make the most of their own roof space."
         crumbs={[
           { name: "Home", path: "/" },
           { name: "About", path: "/about" },
@@ -43,13 +43,17 @@ export default function AboutPage() {
         <div className="grid items-start gap-10 lg:grid-cols-[1fr,1.5fr]">
           <div className="lg:sticky lg:top-24">
             <div className="mx-auto max-w-xs">
-              {/* SWAP POINT: replace /images/jose.jpg with a higher-resolution
-                  professional headshot from Jose when available (square or
-                  portrait works). Source file is currently 400x400. */}
+              {/* SWAP POINT — HEADSHOT.
+                  This is a neutral, brand-colored placeholder avatar
+                  (/images/jose-placeholder.svg). When Jose sends his own
+                  professional photo, drop it into /public/images and update the
+                  `src` below (square or portrait works best). Also update the
+                  `alt` text to describe him, and refresh the credit row in
+                  /public/images/SWAP-IMAGES.md. */}
               <div className="aspect-square overflow-hidden rounded-2xl border border-navy/10 shadow-card">
                 <SiteImage
-                  src="/images/jose.jpg"
-                  alt="Jose Montemayor, U.S. Army veteran and solar consultant"
+                  src="/images/jose-placeholder.svg"
+                  alt="Placeholder headshot — Jose Montemayor's professional photo coming soon"
                   width={400}
                   height={400}
                   priority
@@ -72,26 +76,21 @@ export default function AboutPage() {
               today.
             </p>
             <p>
-              When I came home, I found a mission in solar. I started in 2012 as a
-              direct solar consultant at SolarCity in southern California, sitting
-              with families and helping them understand their power and their
-              options. I have been in the industry ever since.
+              When I came home, I found a mission in solar. I have spent years as
+              a solar consultant since, and the work I care about is simple and
+              close to home: sitting down with people, looking at their real
+              energy costs, and figuring out honestly whether solar makes sense
+              for them.
             </p>
 
-            <h2>Solar at every scale</h2>
+            <h2>What I focus on</h2>
             <p>
-              In 2016, I co-founded BFA Energy LLC, a national solar developer, and
-              I serve as its Chief Operating Officer. We develop utility-scale
-              solar farms, power purchase agreements, and solar plus storage
-              projects. That work gave me a big-picture view of how clean energy
-              is built and paid for across the country.
-            </p>
-            <p>
-              Now I bring that experience down to the kitchen table. Working as an
-              independent consultant through Ion Solar, I help central Illinois
-              homeowners use the same programs and technology that power those big
-              projects to lower their own bills and own a piece of their energy
-              future.
+              Today I work as an independent consultant through Ion Solar with
+              homeowners and businesses across central Illinois. My focus is
+              helping you make the most of the roof space you already have,
+              whether that is a family home or an industrial or commercial
+              building, to bring down your energy costs. I am not here to sell you
+              on anything bigger or more complicated than that.
             </p>
 
             <h2>The values I lead with</h2>
@@ -110,19 +109,21 @@ export default function AboutPage() {
               ))}
             </ul>
             <p className="mt-5">
-              That is exactly why I will only ever recommend solar when it
-              genuinely helps you. If the numbers put you in a better spot, a
-              better rate or protecting what you already have, I will show you how.
-              If they do not, I will tell you straight. You will always get an
-              honest answer from me.
+              Those values are exactly why I will only ever recommend solar when
+              it genuinely puts you in a better situation. If the numbers work, a
+              better rate, more control over your costs, or protecting what you
+              already have, I will show you how. If they do not, I will tell you
+              straight. Whether you are a homeowner or a business owner, you will
+              always get an honest answer from me.
             </p>
 
             <h2>Who I serve</h2>
             <p>
-              I work with homeowners across central Illinois, with my core markets
-              being the Champaign and Bloomington areas and the surrounding
-              communities. If you are nearby and you have an electric bill, I am
-              glad to help you understand it and see what is possible.
+              I work with homeowners and businesses across central Illinois, with
+              my core markets being the Champaign and Bloomington areas and the
+              surrounding communities. If you are nearby and you have an electric
+              bill, I am glad to help you understand it and see what is possible
+              on your own roof.
             </p>
           </div>
         </div>
