@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
 import SiteImage from "@/components/SiteImage";
-import LeadForm from "@/components/LeadForm";
+import LeadFormEmbed from "@/components/LeadFormEmbed";
 import CTASection from "@/components/CTASection";
 import { buildMetadata } from "@/lib/seo";
 import { locations, getLocation } from "@/lib/locations";
@@ -114,16 +114,17 @@ export default function LocationPage({
             </div>
           </div>
 
-          {/* Sidebar with local CTA + compliant form */}
-          <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
-            <div className="card">
-              <LeadForm
-                source={`location-${loc.slug}`}
-                heading={`Free bill review in ${loc.city}`}
-                subheading="Tell me a little about you and I will reach out. No pressure."
-                compact
-              />
+          {/* Sidebar with local CTA + GoHighLevel form */}
+          <aside className="space-y-4">
+            <div className="space-y-1">
+              <h2 className="text-2xl font-bold text-navy">
+                Free bill review in {loc.city}
+              </h2>
+              <p className="text-sm text-ink/70">
+                Tell me a little about you and I will reach out. No pressure.
+              </p>
             </div>
+            <LeadFormEmbed />
           </aside>
         </div>
       </Section>

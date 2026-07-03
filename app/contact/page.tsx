@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
-import LeadForm from "@/components/LeadForm";
+import LeadFormEmbed from "@/components/LeadFormEmbed";
 import FAQ from "@/components/FAQ";
 import { buildMetadata } from "@/lib/seo";
 import { generalFaqs } from "@/lib/faqs";
@@ -120,13 +120,18 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Right: the compliant lead form */}
-          <div className="card lg:sticky lg:top-24 lg:self-start">
-            <LeadForm
-              source="contact-page"
-              heading="Request your free bill review"
-              subheading="Fields marked with an asterisk are required. The text-message consent boxes are optional."
-            />
+          {/* Right: the GoHighLevel lead form */}
+          <div>
+            <div className="mb-4 space-y-1">
+              <h2 className="text-2xl font-bold text-navy">
+                Request your free bill review
+              </h2>
+              <p className="text-sm text-ink/70">
+                Fill out the form and I will reach out. No pressure, no
+                obligation.
+              </p>
+            </div>
+            <LeadFormEmbed />
           </div>
         </div>
       </Section>
