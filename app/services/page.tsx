@@ -4,9 +4,43 @@ import PageHero from "@/components/PageHero";
 import Section from "@/components/Section";
 import SiteImage from "@/components/SiteImage";
 import BillExample from "@/components/BillExample";
+import InteractiveBill from "@/components/InteractiveBill";
+import ExpandableFeatures from "@/components/ExpandableFeatures";
 import NetMeterSamples from "@/components/NetMeterSamples";
 import CTASection from "@/components/CTASection";
+import { bills } from "@/lib/billSections";
 import { buildMetadata } from "@/lib/seo";
+
+const qualifyingItems = [
+  {
+    id: "sunlight",
+    title: "Good sunlight",
+    teaser: "Enough direct sun to produce well.",
+    blurb:
+      "Solar performs best on a roof that gets strong, mostly unshaded sun through the day. During your free assessment, Ion studies your roof's sun exposure across the year to confirm it will produce enough to be worth it.",
+  },
+  {
+    id: "orientation",
+    title: "The right roof orientation",
+    teaser: "Facing a direction that catches the sun.",
+    blurb:
+      "The direction your roof faces changes how much energy the panels make. South and west facing sections tend to produce the most in central Illinois. Ion checks your roof's orientation as part of the analysis.",
+  },
+  {
+    id: "space",
+    title: "Enough roof space",
+    teaser: "Room to fit a system sized to your usage.",
+    blurb:
+      "Your system is sized to the power your home uses across the year, so there needs to be enough clear roof area to fit those panels. If space is tight, the design is adjusted to make the most of what you have.",
+  },
+  {
+    id: "integrity",
+    title: "Sound structural and electrical integrity",
+    teaser: "A roof and panel that can carry the system.",
+    blurb:
+      "Your roof structure and electrical panel need to be in good enough shape to support and connect the system safely. Ion reviews both before anything is installed, so the work is done right.",
+  },
+];
 
 export const metadata: Metadata = buildMetadata({
   title: "Solar Services",
@@ -59,21 +93,9 @@ export default function ServicesPage() {
               fully covered by the available funding. Qualifying simply means your
               home has what solar needs to perform well:
             </p>
-            <ul className="mt-4 grid gap-2 sm:grid-cols-2">
-              {[
-                "Good sunlight",
-                "The right roof orientation",
-                "Enough roof space",
-                "Sound structural and electrical integrity",
-              ].map((q) => (
-                <li key={q} className="flex gap-2 text-sm text-ink/80">
-                  <span className="mt-0.5 text-forest">
-                    <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-7.5 7.5a1 1 0 01-1.4 0L3.3 9.7a1 1 0 011.4-1.4l3.1 3.1 6.8-6.8a1 1 0 011.4 0z" clipRule="evenodd" /></svg>
-                  </span>
-                  {q}
-                </li>
-              ))}
-            </ul>
+            <div className="mt-4">
+              <ExpandableFeatures items={qualifyingItems} />
+            </div>
             <p className="mt-4 text-ink/80">
               You stay free of any loan, debt, lien, or investment, so your
               finances stay completely yours. This is the simplest part of the
@@ -212,18 +234,38 @@ export default function ServicesPage() {
             </h2>
             <p className="mt-3 text-ink/80">
               Once you can read your bill, you can see exactly where your money
-              goes. Here are realistic example bills for the two main central
-              Illinois utilities, with personal details removed. Switch between
-              them, and hover or tap any charge to see what it means.
+              goes. Below is a real Ameren Illinois sample bill with the personal
+              details removed. Tap any highlighted part of it, or any label
+              beneath it, and it opens a plain-English note on what that piece
+              means. Start with the overview page, then open the itemized charge
+              detail.
             </p>
-            <div className="mt-6">
-              <BillExample />
+            <div className="mt-8 space-y-14">
+              {bills.map((bill) => (
+                <InteractiveBill key={bill.id} bill={bill} />
+              ))}
             </div>
-            <p className="mt-4 text-sm text-ink/70">
+            <p className="mt-8 text-sm text-ink/70">
               The good news in those numbers: you are already paying toward solar
               and clean energy through your bill today. Going solar simply puts
               that money to work for your own home.
             </p>
+
+            <details className="group mt-6 rounded-xl border border-navy/10 bg-white p-5 [&_summary::-webkit-details-marker]:hidden">
+              <summary className="flex cursor-pointer items-center justify-between gap-3 text-base font-semibold text-navy">
+                Prefer the dollar amounts? See a full itemized bill
+                <span className="grid h-7 w-7 flex-shrink-0 place-items-center rounded-full bg-cream text-navy transition group-open:rotate-45">
+                  <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path strokeLinecap="round" d="M12 5v14M5 12h14" /></svg>
+                </span>
+              </summary>
+              <p className="mb-5 mt-4 text-sm text-ink/70">
+                A realistic, anonymized Ameren Illinois bill broken into supply,
+                delivery, and taxes, with the exact dollar amounts. Hover or tap
+                any charge for a plain-English definition. A ComEd example is
+                included for homes in that territory.
+              </p>
+              <BillExample />
+            </details>
           </div>
 
           {/* LEARN MORE: ILLINOIS ENERGY */}

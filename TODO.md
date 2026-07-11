@@ -76,6 +76,14 @@ professional.
       Still optional: a higher-resolution professional headshot for Jose, and
       real blurred bill images for `components/BillExample.tsx`.
 
+- [ ] **Interactive bill photos (optional).** The click-to-expand explainer on
+      the Services page (`components/InteractiveBill.tsx`) and the reusable
+      expander cards (`components/ExpandableFeatures.tsx`) each have a photo slot
+      that shows a tidy "Photo coming soon" placeholder until a photo is added.
+      To fill one, drop an image in `public/images/bill/` and set the `image`
+      (and `imageAlt`) field on that section in `lib/billSections.ts`, e.g. a
+      smart-meter photo for "Meter Number" or rooftop panels for "Supply".
+
 - [x] **Social Open Graph image.** A real 1200x630 `og.jpg` (all-black-panel
       home) is in place and wired in `lib/seo.ts`.
 
